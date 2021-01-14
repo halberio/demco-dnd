@@ -1,0 +1,129 @@
+$blue-primary: #00468c;
+// STYLING
+.one_folder {
+ width: 360px;
+ height: 210px;
+ background-color: white;
+ border: 1px solid #dcdbdc;
+ border-radius: 8px;
+ position: relative;
+ margin: 15px 0;
+ margin-right: 40px;
+ cursor: pointer;
+ @media screen and (max-width: 1400px) {
+  margin-right: 30px;
+ }
+ @media screen and (max-width: 1024px) {
+  margin-right: 20px;
+ }
+ @media screen and (max-width: 900px) {
+  width: 330px;
+ }
+ @media screen and (max-width: 768px) {
+  margin-right: 10px;
+  width: 320px;
+ }
+ @media screen and (max-width: 600px) {
+  margin-right: 10px;
+  width: auto;
+  height: auto;
+  min-height: 210px;
+ }
+ &:hover {
+  background-color: rgba(9, 115, 206, 0.05);
+ }
+ .list_folder_elements {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 18px;
+  height: 165px;
+  @media screen and (max-width: 600px) {
+   min-height: 165px;
+   height: auto;
+  }
+  .product_image_container {
+   margin: 4px;
+   height: 56px;
+   border: 1px solid #ccc !important;
+   width: 56px;
+   overflow: hidden;
+
+   @media screen and (max-width: 1024px) {
+    height: 48px;
+    width: 48px;
+   }
+   .img_product_folder {
+    width: 56px;
+   }
+  }
+  .folders_indicator {
+   background-color: $blue-primary;
+   position: relative;
+   .folder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text {
+     fill: #80a3c6;
+    }
+   }
+  }
+  .product_image_container_plus {
+   border: 1px solid #dcdbdc;
+   position: relative;
+   .products_plus_folder_value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   }
+  }
+ }
+ .empty_folder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .folder_footer {
+  height: 45px;
+  border-top: 1px solid #dcdbdc;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  .folder_name {
+   color: $blue_primary;
+   font-weight: 500;
+   margin-left: 20px;
+   cursor: pointer;
+   margin-bottom: 0px;
+   position: relative;
+   overflow: hidden;
+   width: fit-content;
+   text-decoration: none;
+  }
+
+  .folder_name:after {
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 3px;
+   display: block;
+   margin-top: -2px;
+   right: 0;
+   background: #fff;
+   transition: width 0.2s ease;
+   -webkit-transition: width 0.2s ease;
+  }
+
+  .folder_name:hover:after {
+   width: 100%;
+   left: 0;
+   background: $blue-primary;
+  }
+ }
+}
+
+.one_folder_selected {
+ background-color: rgba(9, 115, 206, 0.1) !important;
+}
